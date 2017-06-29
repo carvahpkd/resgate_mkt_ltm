@@ -12,14 +12,14 @@ Quando(/^clicar no botão Entrar$/) do
   click_button 'loginButton'
 end
 
-Então(/^eu clico no menu Navegue por Lojas E seleciono o parceiro Ponto Frio$/) do
+Quando(/^clicar no menu Navegue por Lojas, seleciono o parceiro Ponto Frio$/) do
   find_link("NAVEGUE POR LOJAS").click 
   save_screenshot("c:/users/thiago.carvalho/thiagodev/data/1_vitrine_inicial.png")
   sleep 10
   find("img[alt ='Ponto Frio']").click
 end
 
-Então(/^deve exibir a vitrine do parceiro$/) do
+Quando(/^vai exibir a vitrine do parceiro$/) do
   page.has_title? "https://marketplace.webpremios.com.br/#/loja/ponto-frio"
   save_screenshot("c:/users/thiago.carvalho/thiagodev/data/2_vitrine_parceiro.png")
 end
@@ -29,20 +29,20 @@ Quando(/^eu realizar a busca de um produto$/) do |table|
   find("input[placeholder ='Busque um produto em ponto-frio']").native.send_keys(:enter)
 end
 
-Então(/^eu seleciono o produto para tela de detalhe$/) do
+Quando(/^selecionar o produto vai para tela de detalhe$/) do
   find_link("Sabonete Anti-odor e Suporte Hercules em Aco Inox").click
 end
 
-Então(/^eu clico no botão Adicionar ao Carrinho$/) do
+Quando(/^clico no botão Adicionar ao Carrinho$/) do
   find("a[class='btn-add-carrinho ng-scope']").click
 end
 
-Então(/^eu clico no botão Finalizar Resgate$/) do
+Quando(/^clico no botão Finalizar Resgate$/) do
   first("a[class='btn btn-finalizar']").click
   save_screenshot("c:/users/thiago.carvalho/thiagodev/data/3_detalhe_produto.png")
 end
 
-Então(/^eu preencho o campo ponto de referência e clico no botão terminar resgate$/) do
+Quando(/^preencho o campo ponto de referência e clico no botão terminar resgate$/) do
   fill_in "txtPontoReferencia", with: "Pedido Teste"
   save_screenshot("c:/users/thiago.carvalho/thiagodev/data/4_endereço.png")
   first("a[class='btn btn-finalizar']").click 
