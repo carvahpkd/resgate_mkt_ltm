@@ -1,9 +1,9 @@
 #language: pt
 
-
 Funcionalidade: Confirmação de Endereço
 
 Cenario: Finaliza Resgate Passo 1
+  
   Dado que eu acesse o site "https://padrao.webpremios.com.br/#/busca"
   Quando eu preencher os campos de Login e Senha
   E clicar no botao Entrar no Site
