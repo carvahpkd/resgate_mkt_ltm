@@ -1,6 +1,5 @@
 #language: pt
 
-
 Funcionalidade: Acesso Campanha Padrão Marketplace
 
 Cenario: Validar a Vitrine Inicial
